@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/theme_color_8">
+
+    <TextView
+        android:id="@+id/headLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register Your Account"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#424242"
+        android:textSize="20sp"
+        android:textStyle="bold"></TextView>
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:maxLength="16"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+
+        android:inputType="textPersonName"
+        android:background="@drawable/edit_text_bg"
+        android:hint="Register Your Name"
+        android:gravity="center"
+        android:minHeight="48dp"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+    </EditText>
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:background="@drawable/edit_text_bg"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:hint="Email"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+    </EditText>
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:background="@drawable/edit_text_bg"
+        android:inputType="textWebPassword"
+        android:minHeight="48dp"
+        android:hint="Password"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+    </EditText>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/submitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="Register"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:background="@drawable/btn_bg">
+    </androidx.appcompat.widget.AppCompatButton>
+    <TextView
+        android:id="@+id/tv_forgetPassword"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_gravity="right"
+        android:padding="5dp"
+        android:layout_marginRight="10dp"
+        android:textColor="#2196F3"
+        android:layout_height="wrap_content"
+        android:text="Forgot Your Password ? " />
+
+    <TextView
+        android:id="@+id/login_info_TV_btn"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:padding="5dp"
+        android:background="@drawable/edit_text_bg"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:text="Alreay Have Account?" />
+
+</LinearLayout>

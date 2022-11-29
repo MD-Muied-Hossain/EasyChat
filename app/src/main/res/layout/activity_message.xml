@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Messaging.MessageActivity"
+    android:background="@color/theme_color_8">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/theme_colo_80"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginBottom="2dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            app:cardCornerRadius="44dp">
+
+            <ImageView
+                android:id="@+id/image_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/account_img"></ImageView>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txtChattingWith"
+            android:text="Md. Khalilur Rahmann"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"></TextView>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressMessages"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout">
+    </ProgressBar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMessages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/edtInputText"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"></androidx.recyclerview.widget.RecyclerView>
+
+    <EditText
+        android:id="@+id/edtInputText"
+        android:imeOptions="actionDone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="9dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/message_input_bg"
+        android:hint="Aa"
+        android:maxHeight="100dp"
+        android:minHeight="48dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:textColorHint="#939292"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img_send_message"
+        app:layout_constraintStart_toStartOf="parent"></EditText>
+
+    <ImageView
+        android:id="@+id/img_send_message"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="13dp"
+        android:src="@drawable/send_message"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
